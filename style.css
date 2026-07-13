@@ -36,7 +36,8 @@ a{
 }
 
 .nav__logo--title{
-  font-weight: bold;
+  font-weight: 1000;
+  margin-left: 8px;
 }
 
 .nav__links{
