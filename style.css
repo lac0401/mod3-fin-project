@@ -126,6 +126,7 @@ transition: all 300ms ease;
 
 .header__img--wrapper{
   width: 60%;
+  margin-left: 12px;
 }
 
 .header__img{
