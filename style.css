@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   color: rgb(36, 62, 99); 
+  cursor: default;
 }
 
 body{
@@ -18,6 +19,11 @@ section{
 a{
   text-decoration: none;
   display: inline;
+  cursor: pointer;
+}
+
+input{
+  cursor: text;
 }
 
 .text--highlight{
@@ -120,13 +126,28 @@ transition: all 300ms ease;
   width: 40%;
 }
 
+.header__description--title{
+  font-size: 48px;
+
+}
+
 .header__description--para{
   margin: 32px 0;
   line-height: 24px;
+  font-size: 18px;
 }
 
 .header__customers--title{
   margin-top: 60px;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(33, 57, 91, 0.382);
+}
+
+.header__customers{
+  opacity: 0.5;
+  margin-top: 12px;
+  padding-right: 60px;
 }
 
 .header__img--wrapper{
@@ -140,11 +161,13 @@ transition: all 300ms ease;
 
 .header__email{
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   border: 1px solid rgba(36, 62, 99, 0.319);
+  margin-left: 0;
+  margin-right: 56px;
   border-radius: 500px;
-  padding: 12px;
   transition: all 300ms ease;
+  position: relative;
 }
 
 .header__email:hover{
@@ -152,16 +175,37 @@ transition: all 300ms ease;
 }
 
 .header__email--input{
-  border: none;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 500px;
+  top: 0;
+  bottom: 0;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  padding: 20px 192px 20px 32px;
+  outline: none;
+  position: absolute;
+  transition: all 300ms ease;
+  z-index: 1;
+}
+
+.header__email--input:focus, .header__email--input:active{
+  outline: none;
+  border-color: #6415ff;
 }
 
 .header__email--btn{
-  padding: 18px;
+  margin: 8px;
+  padding: 4px 24px;
+  font-size: 18px;
+  font-weight: 525;
+  height: calc(100%-8px);
   border: none;
   border-radius: 500px;
   background-color: #6415ff;
   color: white;
   transition: all 300ms ease;
+  z-index: 2;
 }
 
 .header__email--btn:hover{
