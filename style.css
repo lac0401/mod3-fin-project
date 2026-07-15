@@ -51,9 +51,6 @@ input{
 
 .section__tag{
   color: #6415ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .section__title{
