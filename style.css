@@ -46,6 +46,7 @@ input {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  max-width: 1028px;
 }
 
 .section__tag {
@@ -53,12 +54,16 @@ input {
 }
 
 .section__title {
-  font-size: 40px;
+  font-size: 48px;
   margin: 20px 0;
+  font-weight: 900;
+  line-height: 1.5;
 }
 
 .section__para {
   font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
   text-align: center;
   max-width: 580px;
   color: rgba(36, 62, 99, 0.792);
@@ -247,6 +252,7 @@ input {
 .feature__row {
   display: flex;
   align-items: flex-start;
+  padding: 32px 24px;
 }
 
 .feature {
@@ -264,13 +270,15 @@ input {
 }
 
 .feature__title {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   padding-bottom: 8px;
 }
 
 .feature__para {
   color: rgba(36, 62, 99, 0.791);
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 /* Quality */
