@@ -420,3 +420,9 @@ input {
 .step__para {
   color: rgba(36, 62, 99, 0.79);
 }
+
+/* Values */
+.values__description{
+  display: flex;
+  flex-direction: column;
+}
