@@ -295,6 +295,8 @@ button{
 
 #quality .section__title {
   font-size: 48px;
+  font-weight: bold;
+  line-height: 1.25;
 }
 
 #quality .section__para {
@@ -392,6 +394,7 @@ button{
 
 .steps__description {
   padding-left: 64px;
+  padding-bottom: 24px;
 }
 
 .step__description {
