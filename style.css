@@ -539,24 +539,87 @@ button {
 .plans {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.plan:nth-child(2) {
+  background: linear-gradient(
+    135deg,
+    rgb(76, 81, 191) 0%,
+    rgb(102, 126, 234) 100%
+  );
 }
 
 .plan {
-  border: 2px solid rgba(36, 62, 99, 0.582);
-  margin: 0 24px;
-  padding: 12px;
+  border: none;
+  margin: 64px;
+  padding: 32px 48px;
+  border-radius: 8px;
+  box-shadow:
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  position: relative;
+}
+
+.plan__strip {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 8px;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.plan:nth-child(1) .plan__strip,
+.plan:nth-child(1) .plan__btn {
+  color: #f7fafc;
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+}
+
+.plan:nth-child(2) .plan__btn {
+  color: rgb(81, 108, 228);
+}
+
+.plan:nth-child(3) .plan__strip,
+.plan:nth-child(3) .plan__btn {
+  color: #f7fafc;
+  background: linear-gradient(
+    115deg,
+    rgb(245, 101, 101) 0%,
+    rgb(254, 178, 178) 100%
+  );
 }
 
 .plan__top {
-  border-bottom: 2px solid rgba(36, 62, 99, 0.582);
+  padding: 32px 0px;
+  color: rgb(36, 62, 99);
 }
 
 .plan__middle {
-  border-bottom: 2px solid rgba(36, 62, 99, 0.582);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 48px;
 }
 
-.plan__bottom {
+.plan:nth-child(1) .plan__middle,
+.plan:nth-child(3) .plan__middle {
+  border-top: 2px solid rgb(229, 231, 235);
+  border-bottom: 2px solid rgb(229, 231, 235);
+}
+
+.plan:nth-child(2) .plan__middle {
+  border-top: 2px solid rgb(102, 126, 234);
+  border-bottom: 2px solid rgb(102, 126, 234);
 }
 
 .plan__title,
@@ -568,19 +631,56 @@ button {
   padding: 4px;
 }
 
-.plan__price {
+.plan:nth-child(2) .plan__title,
+.plan:nth-child(2) .plan__price,
+.plan:nth-child(2) .plan__type,
+.plan:nth-child(2) .plan__audience,
+.plan:nth-child(2) .plan__feature {
+  color: white;
 }
 
-.plan__type {
+.plan__price {
+  font-weight: bold;
+  font-size: 36px;
 }
 
 .plan__audience {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .plan__feature {
+  padding: 10px;
+  font-size: 18px;
 }
 
 .plan__btn {
   display: flex;
-  margin: 12px auto;
+  margin: 0 auto;
+  margin-top: 24px;
+  border: none;
+  border-radius: 24px;
+  padding: 16px 48px;
+  font-size: 16px;
+  transition: all 300ms ease;
+}
+
+.plan__btn:hover {
+  transform: translateY(-1.5px) scale(1.02);
+  box-shadow:
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.plans__blob {
+  z-index: -10;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-50%) translateY(50%) scaleX(1) scaleY(1);
+  height: 256px;
+  width: 256px;
+  opacity: 0.25;
 }
